@@ -10,13 +10,13 @@ Welcome to the **React Redux Nominations Project**! This is a simple app I built
 
 ## How It Works
 ### Adding Movies
-Click the "Add" button to nominate a movie. If it's already in the list, it won't get added again. (We’re strict about these things!)
+Click the "Add" button to nominate a movie. If it's already in the list, it won't get added again. 
 
 ### Keeping It to 5
-To keep things fair and exciting, you can only nominate a maximum of 5 movies. If you try to add more, we’ll just pretend you didn’t. 😏
+To keep things fair and exciting, you can only nominate a maximum of 5 movies. 
 
 ### Removing Movies
-Changed your mind about a nomination? No worries! Click the "Remove" button, and it's gone.
+Click the "Remove" button, and it's gone.
 
 ## What's Under the Hood
 This project uses:
