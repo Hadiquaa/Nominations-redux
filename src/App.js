@@ -4,11 +4,14 @@ import SearchComponent from './Components/SearchComponent';
 import ResultComponent from './Components/ResultComponent';
 import Nominations from './Components/Nominations';
 import { useState,useEffect } from 'react';
+import toast from 'react-hot-toast';
+import { useSelector } from 'react-redux';
 
 function App() {
 const [searchTitle, setSearchTitle] = useState(null);
 const [movies, setMovies] = useState([]);
 const API_URL = `https://www.omdbapi.com/?apikey=1bee52d4&s=${searchTitle}&type=movie&page=1`;
+const nominations = useSelector(state => state.nominations.list);
 
 async function fetchMovies(){
   try {
@@ -29,7 +32,17 @@ useEffect(() => {
   fetchMovies();
 }, [searchTitle]);
 
-console.log(searchTitle);
+
+const saveHandler = () => {
+  if(nominations.length === 0){
+    toast.error("You haven't saved any nominations yet. Please choose some movies first!")
+    return;
+  }
+  else{
+      toast.success("Nominations Saved 🚀");
+
+  }
+}
 
   return (
     <div className="flex justify-center items-center bg-gray-200 min-h-screen">
@@ -50,7 +63,7 @@ console.log(searchTitle);
             save your choices!
           </p>
         </div>
-        <div className="flex w-full gap-4">
+        <div className="flex w-full gap-4 ">
           <div className="w-3/5 flex flex-col gap-6">
             <SearchComponent setSearchTitle={setSearchTitle} />
             <ResultComponent searchTitle={searchTitle} movies={movies} />
@@ -66,7 +79,7 @@ console.log(searchTitle);
               </button>
               <button
                 className="px-3 py-1 text-white text-center font-semibold bg-green-600 rounded-full"
-                
+                onClick={saveHandler}
               >
                 Save
               </button>
