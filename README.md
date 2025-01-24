@@ -3,8 +3,8 @@
 Welcome to the **React Redux Nominations Project**! This is a simple app I built while diving into the world of React and Redux. It's all about adding, managing, and removing movie nominations (with a twist!).
 
 ## What's the Deal?
-- **Nominate Your Faves:** Add movies to your nomination list with just a click. Who doesn’t love giving awards?
-- **Five's the Limit:** You can only nominate up to 5 movies. Tough choices make it interesting, right?
+- **Nominate Your Faves:** Add movies to your nomination list with just a click. 
+- **Five's the Limit:** You can only nominate up to 5 movies. 
 - **Easy Peasy Removal:** Changed your mind? Remove a movie just as easily.
 - **Toast it Up:** Get instant feedback with snazzy toast notifications when you add or remove a movie.
 
